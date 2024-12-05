@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { generateX509Certificate } from '@/app/utils';
 
-const VALID_API_KEY = 'test_api_key_123';
+const VALID_API_KEY = process.env.VALID_API_KEY;
 
 type CertificateRequest = {
   apiKey: string;
